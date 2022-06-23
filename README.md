@@ -1,0 +1,2 @@
+# pytorch_GlobalPointer_Ner
+基于pytorch的GlobalPointer进行中文命名实体识别。
