@@ -19,7 +19,7 @@
 - 1、raw_data下新建一个process.py将原始数据处理为mid_data下的数据。
 - 2、根据参数运行main.py以进行训练、验证、测试和预测。
 
-模型和数据下载地址：
+模型和数据下载地址：链接：https://pan.baidu.com/s/1Gh9UQESQmEXuzyyPUG_FgQ?pwd=1a6s  提取码：1a6s
 
 # 依赖
 
