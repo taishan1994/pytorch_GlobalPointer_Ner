@@ -196,7 +196,7 @@ class BertForNer:
               for j in range(self.args.num_tags):
                   logit_ = logit[j, :len(tokens), :len(tokens)]
                   for start, end in zip(*np.where(logit_.cpu().numpy() > 0.5)):
-                      pred_tmp[id2tag[j]].append(["".join(tokens[start:end + 1]), start])
+                      pred_tmp[id2tag[j]].append(["".join(tokens[start:end + 1]), start-1])
 
             logger.info(dict(pred_tmp))
 
