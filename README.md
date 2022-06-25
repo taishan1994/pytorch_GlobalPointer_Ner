@@ -129,9 +129,14 @@ micro-f1       0.96      0.96      0.96      1588
 # 参考
 
 >[1]https://github.com/gaohongkui/GlobalPointer_pytorch
+>
 >[2]https://github.com/Tongjilibo/bert4torch/
+>
 >[3][将“softmax+交叉熵”推广到多标签分类问题 - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/7359)
+>
 >[4][Transformer升级之路：2、博采众长的旋转式位置编码 - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/8265)
+>
 >[5][GlobalPointer：用统一的方式处理嵌套和非嵌套NER - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/8373)
+>
 >[6][Efficient GlobalPointer：少点参数，多点效果 - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/8877)
 
