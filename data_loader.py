@@ -22,7 +22,7 @@ class ListDataset(Dataset):
         return self.data[index]
 
     @staticmethod
-    def load_data(file_path, tokenizer， max_len):
+    def load_data(file_path, tokenizer, max_len):
         return file_path
 
 
