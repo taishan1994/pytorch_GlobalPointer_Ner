@@ -176,7 +176,8 @@ class BertForNer:
         with torch.no_grad():
             tokenizer = BertTokenizer(
                 os.path.join(self.args.bert_dir, 'vocab.txt'))
-            tokens = fine_grade_tokenize(raw_text, tokenizer)
+            # tokens = fine_grade_tokenize(raw_text, tokenizer)
+            tokens = [i for i in raw_text]
             encode_dict = tokenizer.encode_plus(text=tokens,
                                                 max_length=self.args.max_seq_len,
                                                 padding='max_length',
@@ -185,10 +186,10 @@ class BertForNer:
                                                 return_token_type_ids=True,
                                                 return_attention_mask=True)
             tokens = ['[CLS]'] + tokens + ['[SEP]']
-            token_ids = torch.from_numpy(np.array(encode_dict['input_ids'])).unsqueeze(0)
-            attention_masks = torch.from_numpy(np.array(encode_dict['attention_mask'], dtype=np.uint8)).unsqueeze(0)
-            token_type_ids = torch.from_numpy(np.array(encode_dict['token_type_ids'])).unsqueeze(0)
-            logits = model(token_ids.to(device), attention_masks.to(device), token_type_ids.to(device), None)
+            token_ids = torch.from_numpy(np.array(encode_dict['input_ids'])).unsqueeze(0).to(device)
+            attention_masks = torch.from_numpy(np.array(encode_dict['attention_mask'], dtype=np.uint8)).unsqueeze(0).to(device)
+            token_type_ids = torch.from_numpy(np.array(encode_dict['token_type_ids'])).unsqueeze(0).to(device)
+            logits = model(token_ids, attention_masks, token_type_ids, None)
             batch_size = logits.size(0)
             pred_tmp = defaultdict(list)
             for i in range(batch_size):
