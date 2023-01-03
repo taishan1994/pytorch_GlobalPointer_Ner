@@ -41,7 +41,7 @@ class MyDataset(ListDataset):
               labels = d['labels']
               tokens = [i for i in text]
               if len(tokens) > max_len - 2:
-                tokens = tokens[:max_len]
+                tokens = tokens[:max_len - 2]
               tokens = ['[CLS]'] + tokens + ['[SEP]']
               all_tokens.append(tokens)
               token_ids = tokenizer.convert_tokens_to_ids(tokens)
