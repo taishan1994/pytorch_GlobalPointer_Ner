@@ -1,17 +1,5 @@
 # pytorch_GlobalPointer_Ner
 
-延申：
-- 一种基于TPLinker_plus的命名实体识别：https://github.com/taishan1994/pytorch_TPLinker_Plus_Ner
-- 一种one vs rest方法进行命名实体识别：https://github.com/taishan1994/pytorch_OneVersusRest_Ner
-- 一种级联Bert用于命名实体识别，解决标签过多问题：https://github.com/taishan1994/pytorch_Cascade_Bert_Ner
-- 一种多头选择Bert用于命名实体识别：https://github.com/taishan1994/pytorch_Multi_Head_Selection_Ner
-- 中文命名实体识别最新进展：https://github.com/taishan1994/awesome-chinese-ner
-- 信息抽取三剑客：实体抽取、关系抽取、事件抽取：https://github.com/taishan1994/chinese_information_extraction
-- 一种基于机器阅读理解的命名实体识别：https://github.com/taishan1994/BERT_MRC_NER_chinese
-- W2NER：命名实体识别最新sota：https://github.com/taishan1994/W2NER_predict
-
-****
-
 基于pytorch的GlobalPointer进行中文命名实体识别。
 
 模型分别来自于参考中的【1】【2】。这里还是按照之前命名实体识别的相关模板，具体模型的介绍及预备知识请移步参考里面的链接。复现方式：
@@ -135,7 +123,17 @@ micro-f1       0.96      0.96      0.96      1588
 >[3][将“softmax+交叉熵”推广到多标签分类问题 - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/7359)
 >
 >[4][Transformer升级之路：2、博采众长的旋转式位置编码 - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/8265)
->
+
+
+# 延申
+- 一种基于TPLinker_plus的命名实体识别：https://github.com/taishan1994/pytorch_TPLinker_Plus_Ner
+- 一种one vs rest方法进行命名实体识别：https://github.com/taishan1994/pytorch_OneVersusRest_Ner
+- 一种级联Bert用于命名实体识别，解决标签过多问题：https://github.com/taishan1994/pytorch_Cascade_Bert_Ner
+- 一种多头选择Bert用于命名实体识别：https://github.com/taishan1994/pytorch_Multi_Head_Selection_Ner
+- 中文命名实体识别最新进展：https://github.com/taishan1994/awesome-chinese-ner
+- 信息抽取三剑客：实体抽取、关系抽取、事件抽取：https://github.com/taishan1994/chinese_information_extraction
+- 一种基于机器阅读理解的命名实体识别：https://github.com/taishan1994/BERT_MRC_NER_chinese
+- W2NER：命名实体识别最新sota：https://github.com/taishan1994/W2NER_predict
 >[5][GlobalPointer：用统一的方式处理嵌套和非嵌套NER - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/8373)
 >
 >[6][Efficient GlobalPointer：少点参数，多点效果 - 科学空间|Scientific Spaces (kexue.fm)](https://kexue.fm/archives/8877)
