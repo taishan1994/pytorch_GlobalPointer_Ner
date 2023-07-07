@@ -174,7 +174,7 @@ class BertForNer:
         model, device = load_model_and_parallel(model, self.args.gpu_ids, model_path)
         model.eval()
         with torch.no_grad():
-            tokenizer = BertTokenizer(
+            tokenizer = BertTokenizer.from_pretrained(
                 os.path.join(self.args.bert_dir, 'vocab.txt'))
             # tokens = fine_grade_tokenize(raw_text, tokenizer)
             tokens = [i for i in raw_text]
